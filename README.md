@@ -73,9 +73,13 @@ A főoldal "/" egy "Admin" felületet mutat rajta egy hivatkozással a `Product`
 Az implementációs függés csökkentése érdekében nem példányosítunk közvetlenül Service osztályt, hanem a Contracts-ban
 határozzuk meg
 mit várunk az egyes Service-ktől, és ezeket a Interface-eket az `AppServiceProvider`-ben kapcsoljuk össze a konkrét
-service osztályokkal,és a laravel DI container `app(Contracts\AnInterface::class)` keresztül példányosítjuk a
-meghatározott
-service-t. így a konkrét service osztályoktól nem fogunk függeni.
+service osztályokkal,és a laravel Dependency Injection technikáját felhasználva példányosítjuk a beállított
+service-t:
+```
+public function show(Request $request, CrudServiceInterface $crudService)
+```
+
+így a konkrét service osztályoktól nem fogunk függeni.
 
 - `CrudServiceInterface`
     - CRUD műveletekkel kapcsolatos service.
