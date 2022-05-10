@@ -1,4 +1,4 @@
-# Magyar Bertalan LP teszt feladat
+# Magyar Bertalan webshop teszt feladat
 
 ## Áttekintés
 
