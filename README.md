@@ -37,7 +37,8 @@ Authentikáció és authorizáció nincsen.
 Miután elkészítettük és futtattuk a migrációs fájlt, és megvan a Models mappában a táblához tartozó Eloquent modellünk, 
 implementáljuk ezen az Eloquent modellen a `App\Contracts\Services\CrudModelInterface` -t.  
 Ez egy metódust vár el: `getAttributesInfo():array`.  
-Ezt ilyen struktúrában kell kitöltenünk:
+Ezt ilyen struktúrában kell kitöltenünk, hogy a frontenden ki tudja "rajzolni", nem kötelező minden mezőt itt felvenni, 
+de amelyik nincs felvéve, annak a táblában nullable-nek kell lennie.
 
 ```
 return [
