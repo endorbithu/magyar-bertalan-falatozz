@@ -90,11 +90,11 @@ A sima HTML kliens mellett lehetőségünk van elérni a CRUD rendszert REST API
 ahol a HTML kliensé, a controllerben szálazza szét, a request URL-től függően (api/* vagy nem api/*), és HTTP státusz +
 JSON objektumokkal kommunikál. E köré sincsen authentikáció/authorizáció építve:
 
-GET `/api/crud/Product` => Product entitás listázása
-GET `/api/crud/Product/11` => Product (ID:11) entitás részletezése
-POST `/crud/Product` => (HTTP contentben json formátumban a mező:value-k) Product felvétele
-PUT `/crud/Product/11` => (HTTP contentben json formátumban a mező:value-k) Product szerkesztése
-DELETE `/crud/Product/11` => Product (ID:11) entitás törlése
+- GET `/api/crud/Product` => Product entitás listázása
+- GET `/api/crud/Product/11` => Product (ID:11) entitás részletezése
+- POST `/crud/Product` => (HTTP contentben json formátumban a mező:value-k) Product felvétele
+- PUT `/crud/Product/11` => (HTTP contentben json formátumban a mező:value-k) Product szerkesztése
+- DELETE `/crud/Product/11` => Product (ID:11) entitás törlése
 
 
 ### Hibakezelés
