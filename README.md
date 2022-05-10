@@ -59,12 +59,12 @@ Ez még elég kezdetleges megoldás: boolean, foreign_id, datetime stb mezőket 
 ### Controller, végpontok
 A főoldal "/" egy "Admin" felületet mutat rajta egy hivatkozással a `Product` entitás CRUD eléréséhez.  
 
-GET `/crud/Product` => A Product entitáshoz listaoldal
-GET `/crud/form/Product` => Product entitás létrehozádsa
-POST `/crud/form/Product` => Product entitás létrehozás feldolgozás
-GET `/crud/form/Product/16` => Product (ID:16) entitás szerkesztése
-POST `/crud/form/Product/16` => Product entitás (ID:16) szerkesztés feldolgozás
-POST `/crud/delete/Product` => Product entitás törlése
+- GET `/crud/Product` => A Product entitáshoz listaoldal
+- GET `/crud/form/Product` => Product entitás létrehozádsa
+- POST `/crud/form/Product` => Product entitás létrehozás feldolgozás
+- GET `/crud/form/Product/16` => Product (ID:16) entitás szerkesztése
+- POST `/crud/form/Product/16` => Product entitás (ID:16) szerkesztés feldolgozás
+- POST `/crud/delete/Product` => Product entitás törlése
 
 
 
