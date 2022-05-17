@@ -1,12 +1,47 @@
 # Magyar Bertalan webshop teszt feladat
+## Feladat
+
+### Cél
+A cél egy nagyon egyszerű “webshop” elkészítése, alapműveletek lefejlesztésével. A feladat elvégzéséhez két dologra lesz szükség:
+- PHP backend, ami egy API interfészt biztosít a műveletekhez.
+- Kliens oldal, ami majd meghívja a szükséges api végpontokat és minimális vizuális felületet
+  biztosít a termékekkel kapcsolatos műveletekhez  
+  Lehetőség szerint mind kliens oldalon, mind API oldalon történjen meg az adatok ellenőrzése és az eredménytől függő visszajelzés.
+### API
+Az API végzi majd a tényleges munkát, ami lehetőleg REST megvalósítás legyen. Nem lesz szükség sem authentikációra,
+sem authorizációra, de nem is hátrány, ha van. A kommunikáció során JSON formátum használata javasolt.
+A következő műveleteket kell megvalósítania:
+- Termék létrehozása
+- Termék módosítása
+- Termék törlése
+- Termékek listázása
+  A termék a következő tulajdonságokkal rendelkezik:
+- Név: Termék megnevezése, kötelező adat
+- Leírás: A termék rövid leírása, üresen hagyható
+- Ár: A termék listaára, kötelező adat
+### Kliens
+A kliens bármilyen webes megoldással elkészíthető (pl.: html/js). Célja az API interfész
+tesztelése/kipróbálása.
+#### Termék listaoldal(Főoldal)
+A korábban rögzített termékek listája jelenik itt meg. Minden terméknél két gomb található:
+- Módosítás
+- Törlés
+  Erről a felületről(is) tud létrehozni a felhasználó új terméket.
+  Ha nincs elérhető termék, akkor csak írja ki, hogy “Jelenleg nincs elérhető termék.”.
+#### Termék létrehozás
+Egy form ahol meg lehet adni a termék adatait majd elmenteni azokat. Sikeres mentés esetén ezt
+jelezze a felhasználónak, majd irányítson át a termék lista oldalra
+#### Termék módosítás
+A termék létrehozásnál látható felületre hasonlít. De mentéskor itt az adott termék adatait
+módosítja.
+#### Termék törlése
+A terméket törli, majd frissíti a termék listát Ajax kéréssel a háttérben vagy az oldal újra töltésével.
 
 ## Áttekintés
-
 webshop teszt feladat megoldása  
 Egy egyszerű CRUD rendszer HTML klienssel + API elérhetőség egyéb kliensek számára.  
 Egy entitás van felvéve jelenleg: `Product`.  
 Authentikáció és authorizáció nincsen.
-
 
 ## Környezet
 
